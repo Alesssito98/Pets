@@ -23,18 +23,22 @@ export default function Home() {
     if (!nuevoPet.trim()) return;
 
     try {
+
       const newPet = await addPet({
+
         id: Date.now(), // Genera un ID temporal (la API puede sobreescribirlo)
         name: nuevoPet,
         status: "available",
         photoUrls: [],
         category: { id: 1, name: "Pet" },
         tags: [],
+
       });
   
       console.log("Nueva mascota agregada:", newPet.data);
       setPets((prevPets) => [newPet.data, ...prevPets]);
       setNewPetName("");
+
     } catch (error) {
       console.error("Error al agregar la mascota:", error);
     }
@@ -42,6 +46,7 @@ export default function Home() {
   };
 
   return (
+
     <div  className="contenido">
       <div className="lista">
         <h1>Lista de Mascotas</h1>
@@ -64,5 +69,6 @@ export default function Home() {
         </form>
       </div>
     </div>
+    
   );
 }
