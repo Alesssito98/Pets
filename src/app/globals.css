@@ -1,21 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: white;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: rgb(34, 34, 34);
+
+}
+
+.contenido {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.formulario {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h1 {
+
+  font-size: 150%;
+  margin: 2%
+
+}
+
+ul {
+
+  list-style: none;
+  margin: 2%;
+
+}
+
+input {
+
+  color: black;
+  padding: 3%;
+  margin: 2%;
+
+}
+
+button {
+
+  background-color: white;
+  color: black;
+  padding: 3%;
+  margin: 2%;
+
 }
