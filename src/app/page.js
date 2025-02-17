@@ -52,21 +52,41 @@ export default function Home() {
         <h1>Lista de Mascotas</h1>
         <ul>
           {pets.map((pet) => (
-          <li key={pet.id}>{pet.name}</li>
+            <li key={pet.id}>
+              <strong>{pet.name}</strong>
+              <p>id: {pet.id}</p>
+              <p>nombre: {pet.name}</p>
+              <p>status: {pet.status}</p>
+            </li>
           ))}
         </ul>
       </div>
   
       <div className="formulario">
-        <form onSubmit={handleAddPet}>
-          <input
-            type="text"
-            value={nuevoPet}
-            onChange={(e) => setNewPetName(e.target.value)}
-            placeholder="Nombre de la pet"
-          />
-          <button type="submit">Agregar Pet</button>
-        </form>
+        <div>
+          <form onSubmit={handleAddPet}>
+            <input
+              type="text"
+              value={nuevoPet}
+              onChange={(e) => setNewPetName(e.target.value)}
+              placeholder="Nombre de la pet"
+            />
+            <button type="submit">Agregar Pet</button>
+          </form>
+        </div>
+
+        {/*<div>
+          <form onSubmit={handleAddPet}>
+            <input
+              type="text"
+              value={nuevoPet}
+              onChange={(e) => setNewPetName(e.target.value)}
+              placeholder="Nombre de la pet"
+            />
+            <button type="submit">Actualiza Pet</button>
+          </form>
+        </div>*/}
+        
       </div>
     </div>
     
