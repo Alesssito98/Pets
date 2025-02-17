@@ -28,7 +28,7 @@ export default function Home() {
         name: nuevoPet,
         status: "available",
         photoUrls: [],
-        category: { id: 1, name: "General" },
+        category: { id: 1, name: "Pet" },
         tags: [],
       });
   
